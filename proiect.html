@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <link rel="stylesheet" href="proiect.css">
+  </head>
+  <body>
+    <header>
+		<h1>To-Do List</h1>
+	</header>
+    <section>
+      <form id="task-form">
+        <label for="task-name">Task name:</label>
+        <input type="text" id="task-name" name="task-name" required>
+        <label for="task-priority">Priority:</label>
+        <select id="task-priority" name="task-priority">
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+        <button type="submit">Add task</button>
+      </form>
+      <ul id="task-list"></ul>
+    </section>
+    <script src="proiect.js"></script>
+  </body>
+</html>
