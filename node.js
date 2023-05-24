@@ -16,15 +16,12 @@ app.use(session({
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Setare motor vizualizare
 app.set('view engine', 'ejs');
 
-// Pagina principală
 app.get('/', (req, res) => {
   res.render('index');
 });
 
-// Cerere AJAX
 app.get('/data', (req, res) => {
   fs.readFile('data.json', 'utf-8', (err, data) => {
     if (err) {
@@ -35,7 +32,6 @@ app.get('/data', (req, res) => {
   });
 });
 
-// Pagina pentru erori 404
 app.use((req, res) => {
   res.status(404).render('404');
 });
