@@ -5,7 +5,7 @@ const path = require('path');
 const fs = require('fs');
 const app = express();
 app.set('views', path.join(__dirname, 'views'));
-// Middleware
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session({ 
